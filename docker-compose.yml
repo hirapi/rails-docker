@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/rails/Dockerfile
-    command: bundle exec rails s -p 8888 -b '0.0.0.0'
+    command: bundle exec puma -p 8888 -C /app/config/puma.rb
     ports:
       - '8888:8888'
     volumes:
