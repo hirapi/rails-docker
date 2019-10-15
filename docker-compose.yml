@@ -5,8 +5,6 @@ services:
       context: .
       dockerfile: ./docker/rails/Dockerfile
     command: bundle exec puma -p 8888 -C /app/config/puma.rb
-    ports:
-      - '8888:8888'
     volumes:
       - /var/tmp
       - .:/app
@@ -26,6 +24,14 @@ services:
     extends:
       file: ./docker/mysql/password.yml
       service: password
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - '3000:80'
+    depends_on:
+      - app
 
 volumes: 
   db_data:
