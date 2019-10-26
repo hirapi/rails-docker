@@ -1,24 +1,9 @@
-# README
+# rails-docker
+手元でさくっと試すためのdocker環境
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby 2.6
+- Rails 6.0.0
+- nginx 1.16
+- mysql 5.7
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+男は黙ってmasterにpush
